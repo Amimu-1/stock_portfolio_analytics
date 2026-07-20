@@ -1,0 +1,28 @@
+# Byte-compiled files
+__pycache__/
+*.pyc
+
+# Environment
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Raw per-ticker downloads: bulky and 100% regenerable by running
+# scripts/01_data_download.py -- no need to version-control these.
+data/raw/*.csv
+
+# SQLite database is a rebuildable binary artifact (scripts/06_load_to_sqlite.py)
+outputs/*.db
+
+# Power BI lock/temp files
+*.pbix.bak
+~$*.pbix
+
+# NOTE: data/processed/*.csv, powerbi/*.csv, and outputs/*.png are
+# intentionally KEPT in version control so the metrics, charts, and
+# Power BI source tables are visible on GitHub without anyone needing
+# to run the pipeline first.

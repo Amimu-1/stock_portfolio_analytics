@@ -1,0 +1,16 @@
+Ticker,Sector,CompanyName
+AAPL,Technology,Apple Inc.
+MSFT,Technology,Microsoft Corp.
+GOOGL,Technology,Alphabet Inc.
+NVDA,Technology,NVIDIA Corp.
+JPM,Financials,JPMorgan Chase & Co.
+BAC,Financials,Bank of America Corp.
+GS,Financials,Goldman Sachs Group Inc.
+JNJ,Healthcare,Johnson & Johnson
+UNH,Healthcare,UnitedHealth Group Inc.
+PFE,Healthcare,Pfizer Inc.
+AMZN,Consumer,Amazon.com Inc.
+WMT,Consumer,Walmart Inc.
+PG,Consumer,Procter & Gamble Co.
+XOM,Energy,Exxon Mobil Corp.
+CVX,Energy,Chevron Corp.
