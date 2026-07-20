@@ -1,0 +1,6 @@
+data/processed/*.csv linguist-generated=true
+powerbi/*.csv linguist-generated=true
+outputs/*.png linguist-generated=true
+
+*.sql linguist-detectable=true
+*.md linguist-detectable=true
