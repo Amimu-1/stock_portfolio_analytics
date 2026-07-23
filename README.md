@@ -109,6 +109,7 @@ To rebuild from scratch: open Power BI Desktop → Get Data → Text/CSV → imp
 Design: consistent navy/white theme (`powerbi/stock_portfolio_theme.json`) with color-coded KPI cards — green for return, orange for volatility, red for drawdown — so risk and reward are distinguishable at a glance.
 
 ---
+## 🗄️ SQL Analysis
 
 `sql/02_analysis_queries.sql` contains 8 tested queries against the
 star schema, including:
