@@ -97,24 +97,18 @@ risk-free rate assumption — every downstream script reads from it.
 ---
 
 ## 📊 Power BI Dashboard (4 Pages)
-
-Open Power BI Desktop → **Get Data → Text/CSV** → import all five files
-from `powerbi/` (`dim_stock`, `fact_prices`, `fact_metrics`,
-`fact_portfolio`, `fact_correlation`) → build relationships on `Ticker`.
-
-| Page | Contents |
-|---|---|
-| **1. Portfolio Overview** | KPI cards (Portfolio Return, Volatility, Sharpe, Max Drawdown) · Portfolio vs. S&P 500 cumulative growth line chart · Sector allocation donut |
-| **2. Risk & Return by Stock** | Risk/return scatter (Volatility vs. Return, bubble = Sharpe) · Sortable table of all 15 stocks' metrics · Sector slicer |
-| **3. Value at Risk & Drawdown** | VaR 95%/99% bar chart by stock · Max Drawdown ranked bar chart · Drawdown duration table |
-| **4. Correlation & Diversification** | Correlation matrix heatmap (matrix visual on `fact_correlation`) · Most/least correlated pairs table · Sector correlation summary |
-
-*(Full build notes, including exact visual types and DAX measures, are in
-`powerbi/DASHBOARD_GUIDE.md`.)*
+A fully built, interactive 4-page dashboard sits in `powerbi/`:
+stock_portfolio_dashboard.pdf — static preview of all 4 pages, viewable directly on GitHub, no Power BI required
+stock_portfolio_dashboard.pbix — the live, interactive file. Open in Power BI Desktop to filter by sector, drill into individual stocks, and explore the correlation matrix
+Page	Contents
+1. Portfolio Overview	KPI cards (Return, Volatility, Sharpe, Max Drawdown) · Portfolio vs. S&P 500 cumulative growth chart · Sector allocation donut
+2. Risk & Return by Stock	Risk/return scatter (Volatility vs. Return, bubble size = Sharpe) · Full 15-stock metrics table · Interactive sector slicer
+3. Value at Risk & Drawdown	VaR 95%/99% comparison by stock · Max Drawdown ranked bar chart · Drawdown duration and tail-risk detail table
+4. Correlation & Diversification	Color-scaled 15×15 correlation heatmap · Most/least correlated stock pairs · Average pairwise correlation summary
+To rebuild from scratch: open Power BI Desktop → Get Data → Text/CSV → import all five tables from `powerbi/` (`dim_stock`, `fact_prices`, `fact_metrics`, `fact_portfolio`, `fact_correlation`) → build relationships on `Ticker`. Full build notes, including exact visual types and DAX measures, are in `powerbi/DASHBOARD_GUIDE.md`.
+Design: consistent navy/white theme (`powerbi/stock_portfolio_theme.json`) with color-coded KPI cards — green for return, orange for volatility, red for drawdown — so risk and reward are distinguishable at a glance.
 
 ---
-
-## 🗄️ SQL Analysis
 
 `sql/02_analysis_queries.sql` contains 8 tested queries against the
 star schema, including:
