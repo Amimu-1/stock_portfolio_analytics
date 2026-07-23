@@ -1,0 +1,22 @@
+{
+  "name": "Stock Portfolio Analytics",
+  "dataColors": [
+    "#1B4F72",
+    "#2E86AB",
+    "#5DADE2",
+    "#F39C12",
+    "#E74C3C",
+    "#2ECC71",
+    "#8E44AD",
+    "#95A5A6"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#2C3E50",
+  "tableAccent": "#1B4F72",
+  "good": "#2ECC71",
+  "bad": "#E74C3C",
+  "neutral": "#F39C12",
+  "maximum": "#1B4F72",
+  "center": "#FFFFFF",
+  "minimum": "#E74C3C"
+}
